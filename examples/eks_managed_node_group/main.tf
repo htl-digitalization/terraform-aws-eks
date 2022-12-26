@@ -119,7 +119,7 @@ module "eks" {
     containerd = {
       name = "containerd"
       min_size     = 1
-      max_size     = 1
+      max_size     = 2
       desired_size = 1
       subnet_ids = module.vpc.public_subnets
       instance_types = ["t3.large"]
@@ -181,8 +181,8 @@ module "vpc" {
   enable_dns_hostnames = true
 
   enable_flow_log                      = true
-  create_flow_log_cloudwatch_iam_role  = true
-  create_flow_log_cloudwatch_log_group = true
+  create_flow_log_cloudwatch_iam_role  = false
+  create_flow_log_cloudwatch_log_group = false
 
   public_subnet_tags = {
     "kubernetes.io/cluster/${local.name}" = "shared"
