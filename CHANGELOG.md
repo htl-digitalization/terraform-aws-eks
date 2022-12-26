@@ -2,6 +2,129 @@
 
 All notable changes to this project will be documented in this file.
 
+### [19.4.2](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.4.1...v19.4.2) (2022-12-20)
+
+
+### Bug Fixes
+
+* Drop spot-instances-request from tag_specifications ([#2363](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2363)) ([e391a99](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/e391a99a7bd8209618fdb65cc09460673fbaf1bc))
+
+### [19.4.1](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.4.0...v19.4.1) (2022-12-20)
+
+
+### Bug Fixes
+
+* Correct `eks_managed_*` to `self_managed_*` for `tag_specification` argument ([#2364](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2364)) ([df7c57c](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/df7c57c199d9e9f54d9ed18fb7c1e3a47ad732ed))
+
+## [19.4.0](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.3.1...v19.4.0) (2022-12-19)
+
+
+### Features
+
+* Allow configuring which tags are passed on launch template tag specifications ([#2360](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2360)) ([094ed1d](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/094ed1d5e461552a0a76bc019c36690fe0fc2dd5))
+
+### [19.3.1](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.3.0...v19.3.1) (2022-12-18)
+
+
+### Bug Fixes
+
+* Correct map name for security group rule 4443/tcp ([#2354](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2354)) ([13a9542](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/13a9542dadd29fa75fd76c2adcee9dd17dcffda4))
+
+## [19.3.0](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.2.0...v19.3.0) (2022-12-18)
+
+
+### Features
+
+* Add additional port for `metrics-server` to recommended rules ([#2353](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2353)) ([5a270b7](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/5a270b7bf8de8c5846e91d72ffd9f594cbd8b921))
+
+## [19.2.0](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.1.1...v19.2.0) (2022-12-18)
+
+
+### Features
+
+* Ensure all supported resources are tagged under `tag_specifications` on launch templates ([#2352](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2352)) ([0751a0c](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/0751a0ca04d6303015e8a9c2f917956ea00d184b))
+
+### [19.1.1](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.1.0...v19.1.1) (2022-12-17)
+
+
+### Bug Fixes
+
+* Use IAM session context data source to resolve the identities role when using `assumed_role` ([#2347](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2347)) ([71b8eca](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/71b8ecaa87db89c454b2c9446ff3d7675e4dc5a7))
+
+## [19.1.0](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.0.4...v19.1.0) (2022-12-16)
+
+
+### Features
+
+* Add support for addon `configuration_values` ([#2345](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2345)) ([3b62f6c](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/3b62f6c31604490fc19184e626e73873b296ecd1))
+
+### [19.0.4](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.0.3...v19.0.4) (2022-12-07)
+
+
+### Bug Fixes
+
+* Ensure that custom KMS key is not created if encryption is not enabled, support computed values in cluster name ([#2328](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2328)) ([b83f6d9](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/b83f6d98bfbca548012ea74e792fe14f04f0e6dc))
+
+### [19.0.3](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.0.2...v19.0.3) (2022-12-07)
+
+
+### Bug Fixes
+
+* Invalid value for "replace" parameter: argument must not be null. ([#2322](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2322)) ([9adc475](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/9adc475bc1f1a201648e37b26cefe9bdf6b3a2f7))
+
+### [19.0.2](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.0.1...v19.0.2) (2022-12-06)
+
+
+### Bug Fixes
+
+* `public_access_cidrs` require a value even if public endpoint is disabled ([#2320](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2320)) ([3f6d915](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/3f6d915eef6672440df8c82468c31ed2bc2fce54))
+
+### [19.0.1](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v19.0.0...v19.0.1) (2022-12-06)
+
+
+### Bug Fixes
+
+* Call to lookup() closed too early, breaks sg rule creation in cluster sg if custom source sg is defined. ([#2319](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2319)) ([7bc4a27](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/7bc4a2743f0cdf9c8556a2c067eeb82436aafb41))
+
+## [19.0.0](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v18.31.2...v19.0.0) (2022-12-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* Add support for Outposts, remove node security group, add support for addon `preserve` and `most_recent` configurations (#2250)
+
+### Features
+
+* Add support for Outposts, remove node security group, add support for addon `preserve` and `most_recent` configurations ([#2250](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2250)) ([b2e97ca](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/b2e97ca3dcbcd76063f1c932aa5199b4f49a2aa1))
+
+### [18.31.2](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v18.31.1...v18.31.2) (2022-11-23)
+
+
+### Bug Fixes
+
+* Ensure that `var.create` is tied to all resources correctly ([#2308](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2308)) ([3fb28b3](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/3fb28b357f4fc9144340f94abe9dd520e89f49e2))
+
+### [18.31.1](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v18.31.0...v18.31.1) (2022-11-22)
+
+
+### Bug Fixes
+
+* Include all certificate fingerprints in the OIDC provider thumbprint list ([#2307](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2307)) ([7436178](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/7436178cc1a720a066c73f1de23b04b3c24ae608))
+
+## [18.31.0](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v18.30.3...v18.31.0) (2022-11-21)
+
+
+### Features
+
+* New Karpenter sub-module for easily enabling Karpenter on EKS ([#2303](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2303)) ([f24de33](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/f24de3326d3c12ce61fbaefe1e3dbe7418d8bc85))
+
+### [18.30.3](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v18.30.2...v18.30.3) (2022-11-07)
+
+
+### Bug Fixes
+
+* Update CI configuration files to use latest version ([#2293](https://github.com/terraform-aws-modules/terraform-aws-eks/issues/2293)) ([364c60d](https://github.com/terraform-aws-modules/terraform-aws-eks/commit/364c60d572e85676adca8f6e62679de7d9551271))
+
 ### [18.30.2](https://github.com/terraform-aws-modules/terraform-aws-eks/compare/v18.30.1...v18.30.2) (2022-10-14)
 
 
